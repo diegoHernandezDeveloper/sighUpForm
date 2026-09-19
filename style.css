@@ -1,0 +1,149 @@
+:root {
+    --primary-color: #596D48;
+    --border-color: #f2fded;
+}
+
+@font-face {
+    font-family: norse;
+    src: url(font/Norse.woff2);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+
+}
+
+
+/* header  */
+
+header {
+    width: 40vw;
+    background: url(img/background.avif);
+    background-size: cover;
+}
+
+header span {
+    color: white;
+    font-family: norse, sans-serif;
+    font-size: 130px;
+    font-weight: bolder;
+}
+
+
+
+.logoHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(7, 7, 7, 0.5);
+    position: relative;
+    top: 30%;
+    padding: 10px;
+}
+
+img {
+    opacity: 1;
+}
+
+
+
+/* main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 60vw;
+    height: 100vh;
+    color: var(--primary-color);
+    background-color: var(--border-color);
+}
+
+p, body > h2, button {
+    margin: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+
+form {
+    background-color: rgb(248, 248, 248);
+    padding: 30px 30px;
+    height: 250px;
+    width: 100%;
+    box-shadow: 1px 1px 10px var(--primary-color);
+}
+
+.finalP {
+    font-weight: 400;
+}
+
+.inputsHolder {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inputsHolder div {
+
+
+    height: 50px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+    width: 50%;
+    padding: 10px 0;
+}
+
+label {
+    letter-spacing: 1.5px;
+}
+
+input {
+    border: 1px gray solid;
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bolder;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* validators */
+
+input:focus {
+    outline: none;
+    border: 3px solid var(--primary-color);
+}
+
+
+input[type="password"]:user-invalid {
+    border: 1px solid rgb(167, 7, 74);
+}
